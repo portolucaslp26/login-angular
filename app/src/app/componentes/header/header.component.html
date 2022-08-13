@@ -1,0 +1,13 @@
+<header class="stick-top">
+
+  <nav class="navbar navbar-light bg-white">
+    <a class="navbar-brand">GatitoBook</a>
+    <div *ngIf="user$|async as user">
+      <div *ngIf="user.name">
+        <i class="fa fa-user-circle mr-1"></i>
+        <a class="mr-4">{{ user.name }}</a>
+        <a href="" (click)="logout()">Logout</a>
+      </div>
+    </div>
+  </nav>
+</header>
